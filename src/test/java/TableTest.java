@@ -19,6 +19,7 @@ public class TableTest {
     @Test
     public void testCss(){
         wd.findElement(By.cssSelector("#customers tr:nth-child(7) td:last-child"));
+
 // QTY Rows in Table "tr", add elements to list and print size:
         System.out.println( wd.findElements(By.cssSelector("#customers tr")).size());
 // QTY Rows in Table "th", add elements to list and print size:
@@ -27,6 +28,13 @@ public class TableTest {
         wd.findElement(By.cssSelector("#customers tr:nth-child(3)"));
 // find locator for the last column
         wd.findElement(By.cssSelector("#customers td:last-child"));
+
+        System.out.println(wd.findElement(By.cssSelector(".blacktableborders")).getTagName());
+        System.out.println(wd.findElement(By.cssSelector(".blacktableborders")).getSize());
+        System.out.println(wd.findElement(By.cssSelector(".blacktableborders")).getRect());
+        System.out.println(wd.findElement(By.cssSelector(".blacktableborders")).getLocation());
+        System.out.println(wd.findElement(By.cssSelector(".blacktableborders")).getText());
+        System.out.println(wd.findElement(By.cssSelector(".blacktableborders")).getClass());
 
     }
 
